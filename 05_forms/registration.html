@@ -22,13 +22,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            /* vh stands for viewport height */
         }
 
         form {
             width: 50%;
             /* adjust this value to control the form's width */
+            padding: 10px 80px;
         }
 
         input {
@@ -51,7 +50,7 @@
             text-align: center;
             cursor: pointer;
             float: right;
-            margin-right: 65px;
+            margin-right: 66px;
         }
     </style>
 </head>
@@ -110,8 +109,8 @@
                             min="1" max="50">
                     </li>
                     <li>
-                        <label for="start">Start date</label>
-                        <input type="date" id="start" name="start-date">
+                        <label for="start-date">Start date</label>
+                        <input type="date" id="date" name="start-date">
                     </li>
                     <li>
                         <input class="btn" type="submit" value="Submit">
