@@ -14,28 +14,32 @@
 
         label {
             display: inline-block;
-            width: 100px;
+            width: 150px;
             text-align: right;
         }
 
-        .container {
-            /* position: center; */
-            max-width: 800px;
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* vh stands for viewport height */
         }
 
-        label {
-            width: 20%;
+        form {
+            width: 50%;
+            /* adjust this value to control the form's width */
         }
 
         input {
-            width: 70%;
+            width: 330px;
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
         }
 
         select {
-            width: 70%;
+            width: 330px;
             padding: 16px 20px;
             border: none;
             border-radius: 4px;
@@ -44,6 +48,10 @@
 
         .btn {
             width: 30%;
+            text-align: center;
+            cursor: pointer;
+            float: right;
+            margin-right: 65px;
         }
     </style>
 </head>
@@ -57,60 +65,61 @@
     </header>
 
     <!-- insert form here -->
-    <form action="" class="container">
-        <fieldset>
-            <legend>Please enter your details</legend>
-            <ul>
-                <li>
-                    <label for="fname">First name</label>
-                    <input name="fname" placeholder="John" autofocus="true">
-                </li>
-                <li>
-                    <label for="surname">Surname</label>
-                    <input name="surname" placeholder="Smith">
-                </li>
-                <li>
-                    <label for="position">Position</label>
-                    <input name="position" placeholder="Software Developer">
-                </li>
-                <li>
-                    <label for="email">Email</label>
-                    <input id="email-address" type="email" name="email" placeholder="you@domain.com" required>
-                </li>
-                <li>
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Eg. +447500000000" required>
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <legend>Course Details</legend>
-            <ul>
-                <li>
-                    <label for="course-details">Select a course</label>
-                    <select id="language" name="language">
-                        <option value="01-javascript">Programming with JavaScript</option>
-                        <option value="02-html5">Developing Web Applications using HTML5</option>
-                        <option value="03-responsive">Developing Responsive Websites</option>
-                        <option value="04-jQuery">Leveraging the Power of jQuery</option>
-                    </select>
-                </li>
-                <li>
-                    <label for="number-of-delegates">Number of delegates</label>
-                    <input type="number" id="number-of-delegates" name="number-of-delegates" step="1" value="0" min="1"
-                        max="50">
-                </li>
-                <li>
-                    <label for="start">Start date</label>
-                    <input type="date" id="start" name="start-date">
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <input class="btn" type="submit" value="Submit">
-        </fieldset>
-    </form>
-
+    <div class="form-container">
+        <form>
+            <fieldset>
+                <legend>Please enter your details</legend>
+                <ul>
+                    <li>
+                        <label for="fname">First name</label>
+                        <input name="fname" placeholder="John" autofocus="true">
+                    </li>
+                    <li>
+                        <label for="surname">Surname</label>
+                        <input name="surname" placeholder="Smith">
+                    </li>
+                    <li>
+                        <label for="position">Position</label>
+                        <input name="position" placeholder="Software Developer">
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input id="email-address" type="email" name="email" placeholder="you@domain.com" required>
+                    </li>
+                    <li>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Eg. +447500000000" required>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Course Details</legend>
+                <ul>
+                    <li>
+                        <label for="course-details">Select a course</label>
+                        <select id="language" name="language">
+                            <option value="01-javascript">Programming with JavaScript</option>
+                            <option value="02-html5">Developing Web Applications using HTML5</option>
+                            <option value="03-responsive">Developing Responsive Websites</option>
+                            <option value="04-jQuery">Leveraging the Power of jQuery</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="number-of-delegates">Number of delegates</label>
+                        <input type="number" id="number-of-delegates" name="number-of-delegates" step="1" value="0"
+                            min="1" max="50">
+                    </li>
+                    <li>
+                        <label for="start">Start date</label>
+                        <input type="date" id="start" name="start-date">
+                    </li>
+                    <li>
+                        <input class="btn" type="submit" value="Submit">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
 </body>
 
 </html>
